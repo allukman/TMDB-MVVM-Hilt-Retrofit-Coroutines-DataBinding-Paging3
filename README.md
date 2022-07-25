@@ -21,13 +21,13 @@ Menggunakan API dari TMDB https://www.themoviedb.org/?language=id
 
 ## Screens it contains:
 
-=> Home Screen
-=> ViewPager Upcoming Screen
-=> Movie By Genre Screen
-=> List Genre Screen
-=> Detail Screen
-=> Review Screen
-=> Bottom Navigation Bar
+- Home Screen
+- ViewPager Upcoming Screen
+- Movie By Genre Screen
+- List Genre Screen
+- Detail Screen
+- Review Screen
+- Bottom Navigation Bar
 
 
 
