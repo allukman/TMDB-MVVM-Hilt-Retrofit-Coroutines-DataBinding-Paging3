@@ -7,10 +7,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.tmdb.R
+import com.example.tmdb.data.model.genre.GenreModel
 import com.example.tmdb.data.model.movie.MovieModel
 import com.example.tmdb.databinding.ItemViewpagerBinding
 
 class ViewPagerAdapter(private val items: ArrayList<MovieModel>): RecyclerView.Adapter<ViewPagerAdapter.ViewPagerViewHolder>() {
+
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
 
     fun addList(list: List<MovieModel>) {
         items.clear()
@@ -41,6 +48,14 @@ class ViewPagerAdapter(private val items: ArrayList<MovieModel>): RecyclerView.A
             .transition(DrawableTransitionOptions.withCrossFade())
             .error(R.drawable.ic_error)
             .into(holder.bind.image)
+
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onClickItem(item)
+        }
+    }
+
+    interface OnItemClickCallback {
+        fun onClickItem(data: MovieModel)
     }
 
 

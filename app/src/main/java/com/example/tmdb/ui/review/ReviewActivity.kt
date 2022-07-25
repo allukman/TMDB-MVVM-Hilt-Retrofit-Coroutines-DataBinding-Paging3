@@ -26,7 +26,10 @@ class ReviewActivity : AppCompatActivity() {
 
         initRecyclerView()
         mAdapter.addList(data.results)
-        Log.d("ANUUUU", Gson().toJson(data))
+
+        bind.back.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun initRecyclerView() {

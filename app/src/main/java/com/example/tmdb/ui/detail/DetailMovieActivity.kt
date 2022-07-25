@@ -73,10 +73,19 @@ class DetailMovieActivity : AppCompatActivity() {
         viewModel.trailer.observe(this) {
             when (it) {
                 is Resource.Success -> {
-                    it.data?.results?.get(0)?.let { trailer ->
-                        linkTrailer = trailer.key
+                    val size = it.data?.results?.size
+                    if(size!! >= 1) {
+                        it.data.results[0].let { trailer ->
+                            linkTrailer = trailer.key
+                        }
+                        startTrailer()
+                        bind.tvTextTrailer.visibility = View.VISIBLE
+                        bind.youtubePlayerView.visibility = View.VISIBLE
+                    } else {
+                        bind.tvTextTrailer.visibility = View.GONE
+                        bind.youtubePlayerView.visibility = View.GONE
                     }
-                    startTrailer()
+
                 }
                 is Resource.Error -> {}
                 is Resource.Loading -> {}

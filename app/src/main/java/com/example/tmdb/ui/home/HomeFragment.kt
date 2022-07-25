@@ -167,12 +167,21 @@ class HomeFragment : Fragment(), MovieAdapter.OnItemClickListener {
         upcomingAdapter = ViewPagerAdapter(list)
         bind.upcomingViewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         bind.upcomingViewpager.adapter = upcomingAdapter
+        upcomingAdapter.setOnItemClickCallback(object : ViewPagerAdapter.OnItemClickCallback {
+            override fun onClickItem(data: MovieModel) {
+                goToDetailMovie(data)
+            }
+        })
     }
 
-    override fun onItemClick(data: MovieModel) {
+    private fun goToDetailMovie(data: MovieModel) {
         val intent = Intent(activity, DetailMovieActivity::class.java)
         intent.putExtra("movie", data)
         startActivity(intent)
+    }
+
+    override fun onItemClick(data: MovieModel) {
+        goToDetailMovie(data)
     }
 
 }
