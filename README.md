@@ -7,9 +7,29 @@ Menggunakan API dari TMDB https://www.themoviedb.org/?language=id
 
 [![Kotlin](https://img.shields.io/badge/kotlin-lang-blue)](https://kotlinlang.org/)
 
+- MVVM
+- Retrofit
+- Coroutines
+- Data Binding
+- Dagger Hilt
+- Paging 3
+- Youtube player
+
 ## Requirements
 
 - Android Studio
+
+## Screens it contains:
+
+=> Home Screen
+=> ViewPager Upcoming Screen
+=> Movie By Genre Screen
+=> List Genre Screen
+=> Detail Screen
+=> Review Screen
+=> Bottom Navigation Bar
+
+
 
 #Preview
 
