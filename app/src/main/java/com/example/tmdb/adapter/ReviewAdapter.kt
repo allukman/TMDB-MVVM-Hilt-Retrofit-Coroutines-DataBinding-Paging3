@@ -1,5 +1,7 @@
 package com.example.tmdb.adapter
 
+import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -39,6 +41,17 @@ class ReviewAdapter(private val items: ArrayList<ReviewModel>): RecyclerView.Ada
         holder.bind.tvDate.text = item.created_at.split("T")[0]
         holder.bind.tvContent.text = item.content
         holder.bind.score.text = item.author_details.rating.toString()
+
+        val score = item.author_details.rating.toInt()
+
+        when (score) {
+            in 0..3 -> holder.bind.score.setBackgroundColor(Color.RED)
+            in 4..6 -> holder.bind.score.setBackgroundColor(Color.YELLOW)
+            in 7..10 -> holder.bind.score.setBackgroundColor(Color.GREEN)
+            else -> holder.bind.score.setBackgroundColor(Color.GREEN)
+        }
+
+        Log.d("anu", score.toString())
 
         if (item.author_details.avatar_path != null) {
             val authorPath = item.author_details.avatar_path.split("https")
