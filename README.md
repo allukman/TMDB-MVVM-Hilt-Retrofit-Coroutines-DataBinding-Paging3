@@ -1,6 +1,17 @@
 <h1 align="center"> TMDB </h1>
 
-Aplikasi android untuk menampilkan daftar film populer dan sedang tayang. Menggunakan API dari TMDB https://www.themoviedb.org/?language=id
+Aplikasi android untuk menampilkan daftar film populer. 
+Menggunakan API dari TMDB https://www.themoviedb.org/?language=id
+
+## Build with
+
+[![Kotlin](https://img.shields.io/badge/kotlin-lang-blue)](https://kotlinlang.org/)
+
+## Requirements
+
+- Android Studio
+
+#Preview
 
 ![genre](https://user-images.githubusercontent.com/68275732/180707953-76dae727-8fe1-4b15-a677-2c77a9923bb2.jpg)
 ![home](https://user-images.githubusercontent.com/68275732/180707959-42a5820a-0322-4f63-adfc-020f0decdd6e.jpg)
