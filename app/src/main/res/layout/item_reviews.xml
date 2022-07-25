@@ -16,8 +16,8 @@
             android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:elevation="12dp"
                 android:id="@+id/view"
                 app:cardCornerRadius="40dp"
@@ -28,7 +28,7 @@
                 <ImageView
                     android:id="@+id/iv_profile"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="48dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/logo"/>
 
@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/roboto_medium"
                 android:layout_marginStart="16dp"
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="italic"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:fontFamily="@font/roboto_italic"
                 app:layout_constraintLeft_toLeftOf="@id/tv_name"
                 app:layout_constraintTop_toBottomOf="@id/tv_name"/>
@@ -72,7 +72,7 @@
                 android:id="@+id/tv_content"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:textSize="12sp"
                 android:layout_marginVertical="12dp"
                 android:layout_marginEnd="8dp"
                 android:textColor="@color/black"
